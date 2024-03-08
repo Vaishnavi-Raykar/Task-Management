@@ -10,12 +10,12 @@ const getTopics = async () => {
     });
 
     if (!res.ok) {
-      throw new Error("Failed to fetch tasks");
+      throw new Error("Failed to fetch topics");
     }
 
     return res.json();
   } catch (error) {
-    console.log("Error loading tasks: ", error);
+    console.log("Error loading topics: ", error);
   }
 };
 
@@ -29,10 +29,17 @@ export default async function TopicsList() {
           key={t._id}
           className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
         >
-          <div className="w-full ">
+          <div>
             <h2 className="font-bold text-2xl">{t.title}</h2>
             <div>{t.description}</div>
-            <div><a href={t.github} className="flex justify-center items-center text-3xl w-full"><FaGithub /></a></div>
+            <div>
+              <a
+                href={t.github}
+                className="flex justify-center items-center text-3xl w-full"
+              >
+                <FaGithub />
+              </a>
+            </div>
           </div>
 
           <div className="flex gap-2">

@@ -6,18 +6,13 @@ export default function Navbar() {
       <Link className="text-white font-bold" href={"/"}>
         Task Management
       </Link>
-      {/* <Link className="bg-white p-2" href={"/seeTasks"}>
+      <Link className="bg-white p-2" href={"/seeTasks"}>
         See Tasks
-      </Link> */}
+      </Link> 
       <Link className="bg-white p-2" href={"/addTopic"}>
         Add Tasks
       </Link>
-     <div className="font-bold"> <Link className="bg-white p-2 m-4" href={"/login"}>
-        Login 
-      </Link>
-      <Link className="bg-white p-2" href={"/signup"}>
-        Sign Up
-      </Link></div>
+     
     </nav>
   );
 }
